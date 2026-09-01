@@ -7,7 +7,9 @@ You run Meridia through eight situations. Five choices each, no right answers. E
 scored against eight schools of thought, and at the end the game tells you which one you were
 actually playing.
 
-## Run it
+**Play it: https://dotin13.github.io/doctrine-ir-game/**
+
+## Run it locally
 
 It needs a web server, because the WebGL globe is an ES module (`file://` blocks those).
 
