@@ -1,0 +1,127 @@
+/* ============================================================
+   Eight schools. Five are kinds of realism, because that split
+   is the thing being taught. Written to be read out loud.
+   ============================================================ */
+window.SCHOOLS = {
+  cla: {
+    key: 'cla', abbr: 'CLA',
+    name: 'Classical Realism', short: 'Classical', family: 'realist',
+    color: '#c8992e', glyph: 'Ω',
+    thinkers: 'Thucydides · Machiavelli · Carr · Morgenthau',
+    oneLine: 'People are grabby. So countries are grabby. A good leader manages it, not fixes it.',
+    claim: 'Trouble starts inside human beings, not in the system. People want to dominate, and states run by people do too. So there is no cure — only good judgement. A leader\'s job is prudence: pick the least bad option, and be suspicious of grand moral crusades, especially your own.',
+    unit: 'The leader, and human nature',
+    engine: 'the human urge to dominate',
+    tell: 'You trust judgement over rules, and you distrust anyone who sounds righteous.',
+    falsifier: 'If human nature never changes, it cannot explain why war breaks out in one year and not the next.',
+    quarrel: 'Waltz says this is advice, not a theory. A constant cannot explain a change.',
+    text: 'Morgenthau, *Politics Among Nations* (1948)',
+    compSci: 'Not a model — an assumption. Every agent has a hidden "want to dominate" term. Never set it to zero.'
+  },
+  def: {
+    key: 'def', abbr: 'DEF',
+    name: 'Defensive Realism', short: 'Defensive', family: 'realist',
+    color: '#4fb3d9', glyph: '⊘',
+    thinkers: 'Kenneth Waltz · Robert Jervis · Stephen Van Evera',
+    oneLine: 'Countries want to be safe, not huge. Grabbing too much gets everyone to gang up on you.',
+    claim: 'Nobody is in charge above states, so each looks after itself. But the goal is safety, not size. The catch: your shield looks like a sword to the other side, so both of you arm even though neither wants war. And going big backfires — every bid for dominance has produced a coalition against it.',
+    unit: 'The shape of the whole system',
+    engine: 'the security dilemma — my defence scares you',
+    tell: 'You keep asking how your move looks from the other side of the table.',
+    falsifier: 'America after 1991 was far stronger than anyone and nobody ganged up. That is the hard case.',
+    quarrel: 'Mearsheimer: safety is a fine goal, but you can never check the other side\'s intentions, so "enough" power does not exist.',
+    text: 'Waltz, *Theory of International Politics* (1979); Jervis on the security dilemma (1978)',
+    compSci: 'Agents are black boxes. Behaviour comes from system settings, so you can ignore what is inside a country.'
+  },
+  off: {
+    key: 'off', abbr: 'OFF',
+    name: 'Offensive Realism', short: 'Offensive', family: 'realist',
+    color: '#e0543a', glyph: '▲',
+    thinkers: 'John Mearsheimer · Eric Labs',
+    oneLine: 'You can count their tanks but never read their minds. So take all the power you can get.',
+    claim: 'Starts from the same three ideas as Waltz — nobody in charge, look after yourself, you cannot read minds — and ends somewhere else. Capabilities are countable; intentions are not, and today\'s friendly government is replaced in ten years. So keep getting stronger and aim to dominate your own region. Oceans are hard to cross, so ruling the whole world is off the table.',
+    unit: 'The shape of the whole system',
+    engine: 'you can never know what they will want later',
+    tell: 'You count who is ahead, treat friendly gestures as noise, and plan against what they *could* do.',
+    falsifier: 'A great power that could have expanded cheaply, chose not to, and paid no price for it.',
+    quarrel: 'Jervis and Glaser: your logic predicts endless war, and you admit bids for dominance usually fail. So why is trying rational?',
+    text: 'Mearsheimer, *The Tragedy of Great Power Politics* (2001)',
+    compSci: 'Worst-case planning. Optimise against their maximum capability, because your estimate of their intent has no reliable error bar.'
+  },
+  neo: {
+    key: 'neo', abbr: 'NEO',
+    name: 'Neoclassical Realism', short: 'Neoclassical', family: 'realist',
+    color: '#8f7ad6', glyph: '⌗',
+    thinkers: 'Gideon Rose · Randall Schweller · Fareed Zakaria',
+    oneLine: 'The world pushes. Your parliament, budget and blind spots decide whether you actually move.',
+    claim: 'Power sets the range of things a country could do. What it does do depends on the machinery: whether leaders see the threat, whether elites agree, whether the state can actually raise the money. That explains the awkward cases pure structure misses — countries that clearly see a threat and still fail to respond, and countries that overreach because domestic groups had to be bought off.',
+    unit: 'Outside pressure, filtered through the state\'s insides',
+    engine: 'domestic politics between signal and response',
+    tell: 'You ask "can we actually get this funded and passed?" before asking what the situation demands.',
+    falsifier: 'If adding domestic detail predicted nothing extra, the extra machinery is not worth it.',
+    quarrel: 'Waltz: once anything domestic is allowed in, you can explain any outcome after the fact. That is not prediction.',
+    text: 'Rose (1998); Schweller, *Unanswered Threats* (2006)',
+    compSci: 'Two-level model. Structure is the prior, domestic politics is the likelihood. Same input, different answer per country.'
+  },
+  heg: {
+    key: 'heg', abbr: 'HEG',
+    name: 'Hegemonic Realism', short: 'Hegemonic', family: 'realist',
+    color: '#d98a3c', glyph: '◈',
+    thinkers: 'Robert Gilpin · A.F.K. Organski · Paul Kennedy',
+    oneLine: 'One big country builds the rules. War comes when the growth lines cross.',
+    claim: 'What matters is not that nobody is in charge, but that someone is. The top country writes the rules and pays to enforce them because it profits. Over time its costs rise while a challenger grows faster. Danger peaks just before they draw level — and the tempted party is usually the one on the way down, because its window is closing.',
+    unit: 'The ranking, and how fast it is changing',
+    engine: 'different growth rates',
+    tell: 'You think in growth curves, and you ask who wrote the rules and who is paying for them.',
+    falsifier: 'Britain handed maritime supremacy to America without a war. Drawing level need not mean fighting.',
+    quarrel: 'Constructivists: "level" is a number, but "unhappy with the rules" is an interpretation you smuggled in.',
+    text: 'Gilpin, *War and Change in World Politics* (1981)',
+    compSci: 'Two curves and a crossing point, with the risk of conflict spiking near the crossing.'
+  },
+  lib: {
+    key: 'lib', abbr: 'LIB',
+    name: 'Liberalism', short: 'Liberal', family: 'alt',
+    color: '#4ec9a0', glyph: '⬡',
+    thinkers: 'Kant · Keohane & Nye · Axelrod · Ikenberry · Doyle',
+    oneLine: 'Nobody is in charge, and cooperation still happens — if you change what cheating costs.',
+    claim: 'Accepts that nobody is in charge and that states are selfish, then gets cooperation anyway. Rules and organisations make it cheaper to make deals and easier to catch cheats, and when you expect to deal with someone again, cheating stops paying. Add trade, which makes war expensive, and democracies, which almost never fight each other.',
+    unit: 'States, plus firms, voters, parliaments and treaties',
+    engine: 'repeat business, and knowing what the other side did',
+    tell: 'You reach for inspections, monitoring and side-payments. You change the game rather than win the round.',
+    falsifier: 'Organisations collapsing exactly when they are needed most, as the League of Nations did in the 1930s.',
+    quarrel: 'Realists: states care who gains *more*, so they veto profitable deals. And the strongest country writes the rules anyway.',
+    text: 'Keohane, *After Hegemony* (1984); Axelrod, *The Evolution of Cooperation* (1984)',
+    compSci: 'Repeated prisoner\'s dilemma. Raise the chance of a next round, let players see each other\'s moves, and cooperation becomes stable.'
+  },
+  con: {
+    key: 'con', abbr: 'CON',
+    name: 'Constructivism', short: 'Constructivist', family: 'alt',
+    color: '#7fd1e8', glyph: '✦',
+    thinkers: 'Alexander Wendt · Finnemore & Sikkink · Katzenstein',
+    oneLine: 'Nothing is in charge, but that has no fixed meaning. Countries make anarchy into what it becomes.',
+    claim: 'Facts about weapons do not speak for themselves. British nuclear weapons mean something different in Paris than North Korean ones do, and the difference is not in the physics. What a country wants follows from who it thinks it is, and that is built up through dealing with others. So people who push new standards can change what is even thinkable.',
+    unit: 'Shared ideas: identity, standards, expectations',
+    engine: 'meaning built through interaction',
+    tell: 'You watch language, recognition and precedent, and you ask what your move teaches everyone to expect next.',
+    falsifier: 'A strong, popular, well-established standard simply crushed by a powerful state at no cost to it.',
+    quarrel: 'Mearsheimer: standards are froth. When survival is at stake states drop them, and the strong wrote them anyway.',
+    text: 'Wendt, "Anarchy Is What States Make of It" (1992); Finnemore & Sikkink (1998)',
+    compSci: 'What a player wants is not fixed. The payoff function itself gets rewritten by play, so you cannot hold it still and solve.'
+  },
+  cri: {
+    key: 'cri', abbr: 'CRI',
+    name: 'Critical & Marxist IR', short: 'Critical', family: 'alt',
+    color: '#e05a86', glyph: '✕',
+    thinkers: 'Robert Cox · Immanuel Wallerstein · Gramsci',
+    oneLine: 'Ask who profits. "The national interest" usually belongs to somebody in particular.',
+    claim: 'Treating the country as the basic unit already hides something: which groups inside it the policy actually serves. There is one world economy, split into a rich core and a poor edge, and wealth flows inward. Real power often works by consent, not force — you rule best when the ruled treat your view as plain common sense.',
+    unit: 'The world economy — classes, rich core, poor edge',
+    engine: 'profit, and rule that works by consent',
+    tell: 'You ask who benefits, and what the way the question was asked is doing for someone.',
+    falsifier: 'States that act flatly against their own richest groups — and poor countries that industrialised into the core.',
+    quarrel: 'Realists: you cannot explain why capitalist states fight each other, or why communist states behaved like ordinary great powers.',
+    text: 'Cox (1981); Wallerstein, *The Modern World-System* (1974)',
+    compSci: 'A criticism of modelling itself. Choosing your agents and your objective is already a political choice that makes some people invisible.'
+  }
+};
+window.SCHOOL_ORDER = ['cla', 'def', 'off', 'neo', 'heg', 'lib', 'con', 'cri'];

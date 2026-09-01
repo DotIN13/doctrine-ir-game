@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DOCTRINE — Realism and its Rivals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- three.js addons import the bare specifier "three", so this map is required -->
+<script type="importmap">
+{"imports":{
+  "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+}}
+</script>
+</head>
+<body>
+
+<div id="globe"></div>
+<div id="labels"></div>
+<div id="vig"></div>
+<div id="scan"></div>
+<div id="flash"></div>
+
+<div id="top">
+  <span class="mark">DOCTRINE</span>
+  <span class="sep"></span>
+  <span class="dim">You are Meridia</span>
+  <span class="sep"></span>
+  <span class="act" id="tAct">ACT I</span>
+  <span class="grow"></span>
+  <span class="dim">Situation <b id="tProg">0/8</b></span>
+  <span class="sep"></span>
+  <span class="dim">Insight <b class="cy" id="tIns">0</b></span>
+  <button id="wOpen">Who's who</button>
+  <button id="cxOpen">Codex</button>
+</div>
+
+<!-- narrative, kept to one column so the map stays visible -->
+<div id="panel"></div>
+
+<!-- the beat where the map does the talking -->
+<div id="cine"></div>
+
+<!-- state of the country -->
+<div id="meter">
+  <div id="gauges"></div>
+</div>
+
+<!-- doctrine telemetry -->
+<div id="dock">
+  <div class="cap2">Which school you are playing</div>
+  <svg id="radar" viewBox="-30 -18 260 250"></svg>
+  <div id="lead"></div>
+</div>
+
+<div id="title">
+  <div class="kicker">A game about international relations theory</div>
+  <h1>DOCTRINE</h1>
+  <div class="tag">Realism has five feuding versions. Three rivals want the whole field.</div>
+  <div class="meta">
+    You run Meridia. Eight situations, five choices each, no right answers.<br>
+    Every choice is scored against eight schools of thought as you play.
+  </div>
+  <div class="go">
+    <button class="btn big" id="begin">Take the chair →</button>
+    <button class="btn cy big" id="wTitle">See the map</button>
+  </div>
+  <div class="fine">Drag the globe to spin it · Enter to begin</div>
+</div>
+
+<div id="world">
+  <button class="btn close" id="wClose">Close ✕</button>
+  <div class="head">
+    <div class="eyebrow">The map</div>
+    <h2>Who is who</h2>
+    <div class="sub">An invented world, so nobody arrives with prior loyalties.</div>
+  </div>
+  <div class="wgrid" id="wgrid"></div>
+</div>
+
+<div id="codex">
+  <button class="btn close" id="cxClose">Close ✕</button>
+  <div class="head">
+    <div class="eyebrow">Codex</div>
+    <h2>The eight schools</h2>
+    <div class="sub">Five kinds of realism and three rivals. Read the "what would prove it wrong"
+      lines against each other — that is where the real fights are.</div>
+  </div>
+  <div class="cxgrid" id="cxgrid"></div>
+</div>
+
+<script src="js/world.js"></script>
+<script src="js/schools.js"></script>
+<script src="js/crises-a.js"></script>
+<script src="js/crises-b.js"></script>
+<script type="module" src="js/globe.js"></script>
+<script src="js/game.js" defer></script>
+</body>
+</html>
